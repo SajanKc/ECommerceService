@@ -1,0 +1,24 @@
+security:
+  jwt:
+    secret-key: ohmygodthisissecretkeyok
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommerce
+    username: postgres
+    password: sajan123
+    driver-class-name: org.postgresql.Driver
+
+    # jpa configuration
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+server:
+  servlet:
+    context-path: /api/v1
